@@ -1,0 +1,299 @@
+body {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 0.5fr 2fr 0.5fr;
+  padding: 5px;
+  margin: 0;
+  justify-items: center;
+  background-color: #eaeaea;
+}
+
+.headerTitle {
+  align-self: end;
+  justify-self: start;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+
+.headerImage {
+  content: url('./images/programmer-small.jpg');
+  width: 290px;
+  margin: 5px 0px;
+  box-shadow: 3px 3px 3px grey;
+}
+
+
+.headerText {
+  font-size: 1rem;
+  font-style: italic;
+  color: #000;
+  padding: 10px 0px;
+  margin: 5px 0px;
+}
+
+.headerIcons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.githubIcon {
+  content: url('./images/github.png');
+}
+
+.linkedinIcon {
+  content: url('./images/linkedin.png');
+}
+
+.twitterIcon {
+  content: url('./images/twitter-icon.png');
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100vw;
+  min-height: 400px;
+  margin: 0px;
+  padding: 10px 0px;
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, 1fr);
+  justify-items: center;
+  align-items: center;
+  /*
+  display: flex;
+  flex-direction: column;
+  */
+  align-items: center;
+  gap: 15px;
+  background-color: #023c4a;
+  color: #eaeaea;
+}
+
+.mainTitle {
+  margin: 5px 0px;
+  padding: 0px;
+  height: fit-content;
+}
+
+.myWork {
+  align-self: start;
+  justify-self: start;
+  margin-left: 5px;
+}
+
+.project {
+  margin: 4px 0px;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FDF8CD;
+  width: 95vw;
+  color: #000;
+}
+
+.project>h3 {
+  color: #023c4a;
+}
+
+.project>* {
+  padding: 2px 3px;
+}
+
+
+.headerTitle {
+  margin: 5px 0px;
+  padding: 5px 0px;
+  color: #000;
+}
+
+
+.credits>a {
+  display: block;
+  padding-left: 5px;
+}
+
+.project1>.projectIconContainer>.link1,
+.project2>.projectIconContainer>.link1,
+.project3>.projectIconContainer>.link1,
+.project4>.projectIconContainer>.link1,
+.project5>.projectIconContainer>.link1 {
+  content: url('./images/github.png')
+}
+
+.project1>.projectIconContainer>.link2,
+.project2>.projectIconContainer>.link2,
+.project3>.projectIconContainer>.link2,
+.project4>.projectIconContainer>.link2,
+.project5>.projectIconContainer>.link2 {
+  content: url('./images/link.png')
+}
+
+.project1>img {
+  content: url('./images/battleship-small.jpg');
+}
+
+.project2>img {
+  content: url('./images/restaurant-small.jpg');
+}
+
+.project3>img {
+  content: url('./images/weather-small.jpg');
+}
+
+.project4>img {
+  content: url('./images/tictactoe-small.jpg');
+}
+
+.project5>img {
+  content: url('./images/library-small.jpg');
+}
+
+.projectIconContainer {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+footer {
+  margin: 0px;
+  padding: 10px 5px;
+  background-color: #eaeaea;
+}
+
+
+@media (min-width: 400px) {
+  main {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .project {
+    margin: 4px 5px;
+    padding: 10px 5px;
+  }
+
+  .project>* {
+    margin: 5px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: #023c4a;
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  header {
+    grid-row: 1;
+    grid-column: 1 / 3;
+    grid-template-rows: 2fr 1fr 0.5fr 0.5fr;
+  }
+
+  main {
+    grid-row: 2;
+    grid-column: 1 / 3;
+    width: 96vw;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #023c4a;
+  }
+
+  footer {
+    grid-row: 3;
+    grid-column: 1 / 3;
+    width: 100vw;
+  }
+
+  .myWork {
+    align-self: start;
+    justify-self: center;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .myWorkText::after {
+    content: "Aliquam ornare luctus mi. Ut pharetra nibh placerat, tempor mi sed, viverra lacus. Nam efficitur sit amet leo sed aliquet. Morbi convallis, libero ac eleifend mattis, quam felis finibus lacus, vel venenatis nulla tellus in felis. Curabitur luctus a felis eget dapibus. Pellentesque et ipsum odio. Morbi ac luctus arcu. Mauris id libero sem. Mauris blandit sapien et nisl molestie laoreet. Etiam lorem ante, finibus in diam eu, suscipit imperdiet quam. Nullam maximus nisi dui, a mollis ipsum vehicula faucibus. Integer luctus turpis sed varius convallis.";
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+
+  .project {
+    margin: 4px 0px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 1px;
+    background-color: #FDF8CD;
+    width: auto;
+    color: #000;
+    align-self: start;
+  }
+
+  .project1 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .project2 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .project3 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .project4 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .project5 {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  .project1>img {
+    content: url('./images/battleship-desktop.jpg');
+  }
+
+  .project2>img {
+    content: url('./images/restaurant-desktop.jpg');
+  }
+
+  .project3>img {
+    content: url('./images/weather-desktop.jpg');
+  }
+
+  .project4>img {
+    content: url('./images/tictactoe-desktop.jpg');
+  }
+
+  .project5>img {
+    content: url('./images/library-desktop.jpg');
+  }
+}
